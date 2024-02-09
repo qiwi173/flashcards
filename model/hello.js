@@ -15,20 +15,5 @@ inquirer
 
   .then((answers) => {
     console.info("Привет, ", answers.hello);
-   fs.writeFile('./log.txt', answers.hello)
-  });
-
-  inquirer
-
-  .prompt([
-    {
-      name: "chooseTopic",
-
-      message: "Выбери тему",
-    },
-  ])
-
-  .then((answers) => {
-    console.info("Привет, ", answers.chooseTopic);
-   fs.writeFile('./log.txt', answers.hello)
+   fs.writeFile('../log.txt', answers.hello)
   });
