@@ -1,3 +1,4 @@
+
 const inquirer = require("inquirer");
 const fs = require('fs').promises
 
@@ -9,4 +10,4 @@ function quests(arr){
    obj.answers = obj.answers.map((el, i) => newObj = {name: el, value: i})
    return obj
 }
-console.log(quests(['adsfghj', ['sdfg','dsafgh', 'dfyguh']]))
+
