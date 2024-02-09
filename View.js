@@ -40,31 +40,31 @@ async function viev() {
     {
       type: "list",
       name: "quest1",
-      message: readyQuests[0].question,
+      message: chalk.rgb(rand(), rand(), rand())(readyQuests[0].question),
       choices: readyQuests[0].answers,
     },
     {
       type: "list",
       name: "quest2",
-      message: readyQuests[1].question,
+      message: chalk.rgb(rand(), rand(), rand())(readyQuests[1].question),
       choices: readyQuests[1].answers,
     },
     {
       type: "list",
       name: "quest3",
-      message: readyQuests[2].question,
+      message: chalk.rgb(rand(), rand(), rand())(readyQuests[2].question),
       choices: readyQuests[2].answers,
     },
     {
       type: "list",
       name: "quest4",
-      message: readyQuests[3].question,
+      message: chalk.rgb(rand(), rand(), rand())(readyQuests[3].question),
       choices: readyQuests[3].answers,
     },
     {
       type: "list",
       name: "quest5",
-      message: readyQuests[4].question,
+      message: chalk.rgb(rand(), rand(), rand())(readyQuests[4].question),
       choices: readyQuests[4].answers,
     },
   ]);
