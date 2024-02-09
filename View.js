@@ -23,9 +23,9 @@ async function viev() {
   ]);
   let path;
   if (inqHello["Тема"] === "Спорт") {
-    path = "./topics/nighthawk_flashcard_data.txt";
+    path = "./topics/sport.txt";
   } else {
-    path = "./topics/otter_flashcard_data.txt";
+    path = "./topics/pesni.txt";
   }
   const readyQuests = await Model.getFiles(path).then((data) =>
     data.map((el) => quests(el))
@@ -55,6 +55,12 @@ async function viev() {
       message: readyQuests[3].question,
       choices: readyQuests[3].answers,
     },
+    {
+      type: "list",
+      name: "quest5",
+      message: readyQuests[4].question,
+      choices: readyQuests[4].answers,
+    }
   ]);
   return inq;
 }
