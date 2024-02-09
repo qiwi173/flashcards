@@ -1,8 +1,14 @@
 const inquirer = require("inquirer");
 const Model = require("./model/Model");
 const { quests } = require("./index");
+const chalk = require("chalk");
+
+function rand() {
+  return Math.floor(Math.random() * 255);
+}
 
 async function viev() {
+
   const inqHello = await inquirer.prompt([
     {
       name: "Игрок",
@@ -60,10 +66,9 @@ async function viev() {
       name: "quest5",
       message: readyQuests[4].question,
       choices: readyQuests[4].answers,
-    }
+    },
   ]);
-  return inq;
+  return Object.entries(inq).map((el) => chalk.rgb(rand(), rand(), rand())(el)).join('\n').replaceAll(',', ': ')
 }
 
 viev().then(console.log);
-
